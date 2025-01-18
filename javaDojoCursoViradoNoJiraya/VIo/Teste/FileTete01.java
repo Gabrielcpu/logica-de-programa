@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.time.ZoneId;
 
-public class FileTeste01 {
+public class FileTete01 {
     public static void main(String[] args) {
         File file = new File("file.txt");
         try {
