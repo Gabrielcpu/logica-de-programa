@@ -6,6 +6,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Pathteste02 {
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
     public static void main(String[] args) throws IOException {
         Path pastaPath= Paths.get("pasta");
         if (Files.notExists(pastaPath)){
