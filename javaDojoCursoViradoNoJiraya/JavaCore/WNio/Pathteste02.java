@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Pathteste02 {
     @Override
@@ -19,7 +20,12 @@ public class Pathteste02 {
         Path subPastaPath = Paths.get("pasta/subpasta/subsubpasta");
         Path subPastaDirectory = Files.createDirectories(subPastaPath);
         Path filePath = Paths.get(subPastaPath.toString(), "file.txt");
-        Path filePathCreated = Files.createFile(filePath);
+        if (Files.notExists(filePath)) {
+            Path filePathCreated = Files.createFile(filePath);
+        }
+        Path sourc = filePath;
+        Path target = Paths.get(filePath.getParent().toString(),"file_renamed.txt");
+        Files.copy(sourc,target, StandardCopyOption.REPLACE_EXISTING);
 
     }
 }
