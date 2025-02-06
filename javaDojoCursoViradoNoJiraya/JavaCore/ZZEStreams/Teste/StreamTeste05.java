@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class StreamTeste05 {
     public static void main(String[] args) {
-        List<String> words = List.of("Gomu", "Gomu", "No", "Mi");
+       /* List<String> words = List.of("Gomu", "Gomu", "No", "Mi");
         String[] letters = words.getFirst().split("");
         System.out.println(Arrays.toString(letters));
 
@@ -17,6 +17,6 @@ public class StreamTeste05 {
                 .map(w -> w.split("")) // stream<String[]>
                 .flatMap(Arrays::stream) //<Stream<String>
                 .collect(Collectors.toList());
-        System.out.println(letters2);
+        System.out.println(letters2);*/
     }
 }
