@@ -182,7 +182,6 @@ public class ProducerRepository {
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, name);
         return ps;
-
     }
 
     public static void ShowProducerMetaData() {
